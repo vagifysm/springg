@@ -1,0 +1,16 @@
+# Development profile: verbose, human-readable logs and more actuator endpoints.
+logging:
+  level:
+    root: INFO
+    com.example.app: DEBUG
+  pattern:
+    level: "%5p [%X{requestId:-}]"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,loggers
+  endpoint:
+    health:
+      show-details: when-authorized

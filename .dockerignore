@@ -1,0 +1,15 @@
+.git
+.gitignore
+.gradle
+build
+.idea
+.vscode
+*.iml
+.env
+.env.*
+!.env.example
+docker-compose.yml
+Dockerfile
+README.md
+scripts
+*.bak

@@ -1,0 +1,19 @@
+# Production profile: JSON (ECS) structured logs, minimal exposure.
+logging:
+  level:
+    root: INFO
+    com.example.app: INFO
+  structured:
+    format:
+      console: ecs
+
+management:
+  endpoint:
+    health:
+      show-details: never
+
+springdoc:
+  api-docs:
+    enabled: ${SWAGGER_ENABLED:false}
+  swagger-ui:
+    enabled: ${SWAGGER_ENABLED:false}
